@@ -1,12 +1,13 @@
 const express = require('express');
-const { register, login } = require('../controllers/authcontroller');
+const { register, login } = require('../controllers/authcontroller'); // Ensure correct case
+const authenticateToken = require('../middlewares/authMiddleware'); // Add your middleware if needed
 
+const router = express.Router();
 
-const router = express.Router ();
-
-
+// Registration route
 router.post('/register', register);
-router.post('/login', login);
 
+// Login route
+router.post('/login', login);
 
 module.exports = router;

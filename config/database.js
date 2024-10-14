@@ -5,7 +5,7 @@ dotenv.config();
 
 const useRemoteDB = process.env.DB_ENV === 'remote';
 
-// Create a connection pool
+
 const pool = mysql.createPool({
     host: useRemoteDB ? process.env.REMOTE_DB_HOST : process.env.DB_HOST,
     user: useRemoteDB ? process.env.REMOTE_DB_USER : process.env.DB_USER,
@@ -17,12 +17,12 @@ const pool = mysql.createPool({
     queueLimit: 0
 });
 
-// Test the connection
+
 const testConnection = async () => {
     try {
         const connection = await pool.getConnection();
         console.log(`Connected to the ${useRemoteDB ? 'remote' : 'local'} MySQL database!`);
-        connection.release(); // Release the connection back to the pool
+        connection.release(); 
     } catch (err) {
         console.error('Database connection error:', err);
     }

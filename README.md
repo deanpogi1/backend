@@ -1,12 +1,26 @@
-# BACKEND PROJECT
+# API Documentation
 
+## API Link:
+https://backend-6-ein1.onrender.com
 
-Server: sql12.freemysqlhosting.net
-Name: sql12737645
-Username: sql12737645
-Password: GzpUB2rYDA
-Port number: 3306
+## Default Account:
+- *Username*: fimperial
+- *Password*: 123456789
 
-# WEBSPACE
+## Endpoints:
+### Authentication Endpoints:
+- *POST* /api/auth/register: Register a new user.
+- *POST* /api/auth/login: Login and receive a JWT token.
 
-https://backend-4-ulrw.onrender.com
+### User Endpoints:
+- *GET* /api/user: Get a list of all users.
+
+### Department Endpoints:
+- *POST* /api/dept: Create a new department.
+- *GET* /api/dept: Get all departments.
+
+### Course Endpoints:
+- *POST* /api/course: Create a new course.
+
+## GitHub Repository:
+[[GitHub Repo Link]](https://github.com/deanpogi1/backend.git)
